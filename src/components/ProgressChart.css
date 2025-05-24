@@ -1,0 +1,97 @@
+.progress-chart {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.view-controls {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.view-controls button {
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+}
+
+.view-controls button.active {
+  background: #4ACAF5;
+  color: white;
+  border-color: #4ACAF5;
+}
+
+.chart {
+  height: 300px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  gap: 4px;
+  padding-bottom: 30px;
+}
+
+.bar-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.bar {
+  width: 100%;
+  background-color: #4ACAF5;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: height 0.3s ease;
+  min-height: 1px;
+}
+
+.bar-value {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #666;
+}
+
+.bar-label {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .progress-chart {
+    padding: 15px;
+  }
+
+  .view-controls {
+    flex-direction: column;
+  }
+
+  .bars {
+    gap: 2px;
+  }
+
+  .bar-label {
+    font-size: 10px;
+  }
+} 
